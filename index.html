@@ -21,7 +21,14 @@
                   https://picsum.photos/id/237/width/height -->
 
 <!-- x1 -->
-<img src="https://picsum.photos/id/237/320/240" alt="Cute puppy"
+<img src="https://picsum.photos/id/237/320/240"
+srcset="
+https://picsum.photos/id/237/320/240 1200w, 
+https://picsum.photos/id/237/640/480 2000w, 
+https://picsum.photos/id/237/960/720 3000w"
+sizes="(max-width: 710px) 240px,
+(max-width: 991px) 320px, 100vw"
+alt="Cute puppy"
  width="320" height="240">
 
 <!-- x2 -->
@@ -31,11 +38,21 @@
 <!-- x3 -->
 <img src="https://picsum.photos/id/237/960/720" alt="Cute puppy"
  width="320" height="240">
+
+ <picture>
+  <source srcset="https://picsum.photos/id/237/640/480" 
+  media="(max-width: 600px)">
+  <source srcset="https://picsum.photos/id/237/960/720" 
+  media="(min-width: 601px)">
+  <img src="https://picsum.photos/id/237/320/240" alt="cute cuppy">
+ </picture>
+ 
               </div>
              </section>
              <section class="home__responsive responsive-home">
               <div class="responsive-home__container container">
                 <img src="https://unsplash.it/960/480" alt="A random image" />
+             <div class="responsive-home__background"></div>
               </div>
              </section>
              </main>
